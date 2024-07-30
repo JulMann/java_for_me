@@ -5,12 +5,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class TestBase {
     protected static WebDriver driver;
 
-    protected static void removeContact() {
-        driver.findElement(By.linkText("home")).click();
-        driver.findElement(By.xpath("//table[@id=\'maintable\']/tbody/tr[2]/td/input")).click();
-        driver.findElement(By.xpath("//input[@value=\'Delete\']")).click();
-    }
-
     @BeforeEach
     public void setUp() {
         if (driver == null) {

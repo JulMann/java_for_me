@@ -51,7 +51,9 @@ public class ContactRemovalTests extends TestBase {
             driver.findElement(By.name("byear")).sendKeys("2001");
             driver.findElement(By.xpath("(//input[@name=\'submit\'])[2]")).click();
         }
-        removeContact();
+        driver.findElement(By.linkText("home")).click();
+        driver.findElement(By.xpath("//table[@id=\'maintable\']/tbody/tr[2]/td/input")).click();
+        driver.findElement(By.xpath("//input[@value=\'Delete\']")).click();
     }
 
 }
